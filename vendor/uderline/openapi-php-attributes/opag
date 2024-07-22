@@ -1,0 +1,49 @@
+#!/usr/bin/env php
+<?php declare(strict_types=1);
+
+$autoload_path = null;
+
+foreach ([__DIR__ . '/../../autoload.php', __DIR__ . '/vendor/autoload.php'] as $autoload) {
+    if (file_exists($autoload)) {
+        $autoload_path = $autoload;
+        break;
+    }
+}
+
+if (!$autoload_path) {
+    die;
+}
+
+require $autoload_path;
+
+use Symfony\Component\Finder\Finder;
+
+if ($argc <= 2) {
+    $dirs = [$argv[1] ?? './'];
+    $outputFile = './openapi.json';
+} else if (is_dir($argv[$argc - 1])) {
+    $dirs = array_slice($argv, 1);
+    $outputFile = './openapi.json';
+} else {
+    $dirs = array_slice($argv, 1, -1);
+    $outputFile = $argv[$argc - 1];
+}
+
+$files = Finder::create()->files()->name('*.php')->in($dirs)->sortByName();
+
+foreach ($files as $autoload) {
+    include_once $autoload->getPathName();
+}
+
+try {
+    $generator = \OpenApiGenerator\Generator::create()->generate();
+} catch (\Exception $e) {
+    echo "[ERROR] ".$e->getMessage();
+    die;
+}
+
+$schema = json_encode($generator, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+
+file_put_contents($outputFile, $schema);
+
+echo "DONE !";
