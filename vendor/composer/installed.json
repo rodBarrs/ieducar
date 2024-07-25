@@ -6504,6 +6504,45 @@
             "install-path": "../phpunit/phpunit"
         },
         {
+            "name": "portabilis/i-educar-library-package",
+            "version": "2.9.x-dev",
+            "version_normalized": "2.9.9999999.9999999-dev",
+            "dist": {
+                "type": "path",
+                "url": "./packages/portabilis/i-educar-library-package",
+                "reference": "05bb90e89345b855872ee981f896c6936a2c3110"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "iEducar\\Packages\\Library\\Providers\\LibraryServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "classmap": [
+                    "ieducar/intranet/include",
+                    "ieducar/lib",
+                    "ieducar/modules/Biblioteca/Model"
+                ],
+                "psr-4": {
+                    "iEducar\\Packages\\Library\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Portabilis Tecnologia",
+                    "email": "contato@portabilis.com.br"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            },
+            "install-path": "../portabilis/i-educar-library-package"
+        },
+        {
             "name": "portabilis/i-educar-reports-package",
             "version": "2.9.x-dev",
             "version_normalized": "2.9.9999999.9999999-dev",

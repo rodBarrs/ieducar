@@ -23,6 +23,11 @@
         },
         {
             "type": "path",
+            "url": "./packages/portabilis/i-educar-library-package",
+            "symlink": true
+        },
+        {
+            "type": "path",
             "url": "./packages/portabilis/i-educar-reports-package",
             "symlink": true
         },
@@ -150,6 +155,7 @@
         "vlucas/phpdotenv": "v5.6.0",
         "voku/portable-ascii": "2.0.1",
         "webmozart/assert": "1.11.0",
+        "portabilis/i-educar-library-package": "@dev",
         "portabilis/i-educar-transport-package": "@dev"
     },
     "require-dev": {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77416a0f920d511c8d014b9102a27f03",
+    "content-hash": "ea51561dded3ec7657d1bbfa3ac8736c",
     "packages": [
         {
             "name": "ankurk91/laravel-eloquent-relationships",
@@ -4355,6 +4355,42 @@
                 }
             ],
             "time": "2024-06-24T06:27:33+00:00"
+        },
+        {
+            "name": "portabilis/i-educar-library-package",
+            "version": "2.9.x-dev",
+            "dist": {
+                "type": "path",
+                "url": "./packages/portabilis/i-educar-library-package",
+                "reference": "05bb90e89345b855872ee981f896c6936a2c3110"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "iEducar\\Packages\\Library\\Providers\\LibraryServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "ieducar/intranet/include",
+                    "ieducar/lib",
+                    "ieducar/modules/Biblioteca/Model"
+                ],
+                "psr-4": {
+                    "iEducar\\Packages\\Library\\": "src/"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Portabilis Tecnologia",
+                    "email": "contato@portabilis.com.br"
+                }
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "portabilis/i-educar-reports-package",
@@ -11680,6 +11716,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "portabilis/i-educar-reports-package": 20,
+        "portabilis/i-educar-library-package": 20,
         "portabilis/i-educar-transport-package": 20
     },
     "prefer-stable": true,

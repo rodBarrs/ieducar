@@ -11,6 +11,7 @@ return array(
     'phpseclib3\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'iEducar\\Packages\\Transport\\' => array($vendorDir . '/portabilis/i-educar-transport-package/src'),
+    'iEducar\\Packages\\Library\\' => array($vendorDir . '/portabilis/i-educar-library-package/src'),
     'iEducar\\Community\\Reports\\' => array($vendorDir . '/portabilis/i-educar-reports-package/src'),
     'iEducar\\' => array($baseDir . '/src'),
     'ZipStream\\' => array($vendorDir . '/maennchen/zipstream-php/src'),

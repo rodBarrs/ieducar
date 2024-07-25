@@ -1027,6 +1027,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'portabilis/i-educar-library-package' => array(
+            'pretty_version' => '2.9.x-dev',
+            'version' => '2.9.9999999.9999999-dev',
+            'reference' => '05bb90e89345b855872ee981f896c6936a2c3110',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../portabilis/i-educar-library-package',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'portabilis/i-educar-reports-package' => array(
             'pretty_version' => '2.9.x-dev',
             'version' => '2.9.9999999.9999999-dev',
